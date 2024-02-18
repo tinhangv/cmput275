@@ -23,13 +23,13 @@ void pop(struct IntArray *p){
     --p->len;
 }
 
-void printArray(int arr[], unsigned int len) {
-  printf("print array:");
-  for (unsigned int i = 0; i < len; ++i) {
-    printf("%d", arr[i]);
-  }
-  printf("\n");
-}
+// void printArray(int arr[], unsigned int len) {
+//   printf("print array:");
+//   for (unsigned int i = 0; i < len; ++i) {
+//     printf("%d", arr[i]);
+//   }
+//   printf("\n");
+// }
 
 int main(){
     //initialize a dynamic array with capacity 4
@@ -49,9 +49,8 @@ int main(){
         }else{ 
             //if is char
             char operation = '\0';
-            scanf("%c", &operation);
+            scanf(" %c", &operation);
             //printf("(%c)\n",operation);
-            if(operation == '\n' || operation == ' ' || operation == '\t')continue;
             if(operation == 'p' || operation == 's' || operation == '*' || operation == '/'){
                 int a=ia.arr[ia.len-2], b=ia.arr[ia.len-1];
                 pop(&ia);pop(&ia);
