@@ -96,6 +96,7 @@ void printUnion(int x[], size_t xLen, int y[], size_t yLen){
         ++j;
     }
     printArray(setUnion.arr, setUnion.len);
+    free(setUnion.arr);
 }
 
 void printIntersection(int x[], size_t xLen, int y[], size_t yLen){
@@ -113,6 +114,7 @@ void printIntersection(int x[], size_t xLen, int y[], size_t yLen){
         }
     }
     printArray(setInter.arr, setInter.len);
+    free(setInter.arr);
 }
 
 int main(){
