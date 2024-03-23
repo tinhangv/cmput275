@@ -7,22 +7,22 @@ using namespace std;
 //#define debug
 
 void print(string &grid, int rows, int columns){
-    for(size_t i=0;i<columns;++i) cout << '|';
+    for(int i=0;i<columns;++i) cout << '|';
     cout << endl;
-    for(size_t row=0; row<rows; ++row){
-        for(size_t col=0;col<columns;++col){
+    for(int row=0; row<rows; ++row){
+        for(int col=0;col<columns;++col){
             cout << grid[columns*row+col];
         }
         cout << endl;
     }
-    for(size_t i=0;i<columns;++i) cout << '|';
+    for(int i=0;i<columns;++i) cout << '|';
     cout << endl;
 }
 
 void step(string &grid, int rows, int columns){
     string tempGrid = "";
-    for(size_t row=0; row<rows; ++row){
-        for(size_t col=0;col<columns;++col){
+    for(int row=0; row<rows; ++row){
+        for(int col=0;col<columns;++col){
             #ifdef debug 
             cout << "row:" << row << " col:" << col << endl; //debug
             #endif
@@ -32,7 +32,7 @@ void step(string &grid, int rows, int columns){
             #ifdef debug 
             cout << '['; //debug 
             #endif
-            for(size_t t=0; t<8; ++t){
+            for(int t=0; t<8; ++t){
                 int i=row+checks[t][0];
                 int j=col+checks[t][1];
                 #ifdef debug 
