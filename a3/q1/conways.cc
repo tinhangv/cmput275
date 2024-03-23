@@ -4,6 +4,64 @@
 #include <sstream>
 
 using namespace std;
+//#define debug
+
+void print(string &grid, int rows, int columns){
+    for(size_t i=0;i<columns;++i) cout << '|';
+    cout << endl;
+    for(size_t row=0; row<rows; ++row){
+        for(size_t col=0;col<columns;++col){
+            cout << grid[columns*row+col];
+        }
+        cout << endl;
+    }
+    for(size_t i=0;i<columns;++i) cout << '|';
+    cout << endl;
+}
+
+void step(string &grid, int rows, int columns){
+    string tempGrid = "";
+    for(size_t row=0; row<rows; ++row){
+        for(size_t col=0;col<columns;++col){
+            #ifdef debug 
+            cout << "row:" << row << " col:" << col << endl; //debug
+            #endif
+            int neighbors =0;
+            int checks[8][2] = {{-1,-1},{-1,0},{-1,1},{0,-1},{0,1},{1,-1},{1,0},{1,1}};
+            //do checks
+            #ifdef debug 
+            cout << '['; //debug 
+            #endif
+            for(size_t t=0; t<8; ++t){
+                int i=row+checks[t][0];
+                int j=col+checks[t][1];
+                #ifdef debug 
+                cout << '{'; //debug
+                #endif
+                if(i>=0 && i<rows && j>=0 && j<columns){
+                    char neighbor = grid[columns*i+j];
+                    if(neighbor == 'O') ++neighbors;
+                    #ifdef debug 
+                    cout << (neighbor == 'O') ; //debug
+                    #endif
+                }
+                #ifdef debug 
+                cout << '}'; //debug
+                #endif
+            }    
+            if(neighbors==3 || (grid[columns*row+col] == 'O' && neighbors == 2)) tempGrid += 'O';
+            else tempGrid += '.';
+            #ifdef debug 
+            cout << ']' ; //debug
+            cout << " n=" << neighbors << endl; //debug
+            #endif
+        }
+        #ifdef debug 
+        cout << endl; //debug
+        #endif
+    }
+    grid = tempGrid;
+}
 
 int main(){
     //read in grid
@@ -28,40 +86,11 @@ int main(){
     //s: progress grid by one time step
     //p: print grid
     char command;
-    string tempGrid="";
     while(cin>>command){
         if(command == 's'){
-            tempGrid = "";
-            for(size_t row=0; row<rows; ++row) 
-            for(size_t col=0;col<columns;++col){
-                int neighbors =0;
-                int checks[8][2] = {{-1,-1},{-1,0},{-1,1},{0,-1},{0,1},{1,-1},{1,0},{1,1}};
-                //do checks
-                for(size_t t=0; t<8; ++t){
-                    int i=row+checks[t][0];
-                    int j=col+checks[t][1];
-                    if(i>=0 && i<rows && j>=0 && j<columns){
-                        char neighbor = grid[columns*i+j];
-                        if(neighbor == '0') ++neighbors;
-                    }
-                }
-                
-                if(neighbors==3) tempGrid += '0';
-                else tempGrid += '.';
-            }
-            grid = tempGrid;
+            step(grid,rows,columns);
         }else if(command == 'p'){
-            for(size_t i=0;i<columns;++i) cout << '|';
-            cout << endl;
-            for(size_t row=0; row<rows; ++row){
-                for(size_t col=0;col<columns;++col){
-                    cout << grid[columns*row+col];
-                }
-                cout << endl;
-            }
-            for(size_t i=0;i<columns;++i) cout << '|';
-            cout << endl;
+            print(grid,rows,columns);
         }
     }
-  
 }
