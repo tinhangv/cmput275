@@ -1,0 +1,5 @@
+axis
+forceOnly
+pointOnly
+2to2Travel
+many

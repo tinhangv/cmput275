@@ -1,0 +1,53 @@
+n p -219 289
+q
+n f 8 -3
++
+p p
+q
+p f
++
++
+* 3
+q
+n f 1 2
+n p 3 4
+* 2
+* 3
++
+n f -1 -2
+p f
+n p 2 3
+p p
+q
+n f 45 5
+p f
++
+p p
+q
+n f 180 10
+* 57
+p f
+q
+n f 270 7
++
+p f
+q
+n p 0 0
+p p
+q
+n f 90 10
++
+p f
+q
+n p -3 4
+p p
+q
+n f 180 20
+* -9
+p f
+q
+n f 270 15
++
+p f
+q
+
