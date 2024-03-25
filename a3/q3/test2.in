@@ -1,0 +1,34 @@
+n a 1 2 3 q
+p a
+n d 3 4 5 6 7 a 
+p d 
+n b 3 4 5 a 
+p b
+& b d
+& b a 
+p a 
+a a -1 
+p a 
+r a 2 
+p a  
+| a b 
+p b 
+a a 0 
+p a 
+s b d 
+p b 
+p d 
+s d b 
+c b 3 
+c b -99 
+n c 99 123 234 d
+p c 
+n d 123 999 234 a 
+p d 
+= c d
+= c a 
+d a b
+< a c
+m a c
+v b c
+q

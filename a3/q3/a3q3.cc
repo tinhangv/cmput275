@@ -59,7 +59,7 @@ int main() {
                         of <ind1> and prints out the result
     * c <ind1> <elem> - Calls the contains method to check if <elem> is contained
                         within the target set and prints out the result
-    * a <ind1> <elem> - Calls the add method to add the given <elem> 
+    * a <ind1> <elem> n- Calls the add method to add the given <elem> 
                         to the target set
     * r <ind1> <elem> - Calls the remove method to remove the given <elem> 
                         from the tareget set

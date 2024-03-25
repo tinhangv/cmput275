@@ -3,8 +3,8 @@
 #include <iostream>
 class intSet {
   int *data;
-  int size;
-  int capacity;
+  size_t size;
+  size_t capacity;
  public:
   intSet(); // default constructor
   intSet(const intSet& is); // copy constructor

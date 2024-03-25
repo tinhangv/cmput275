@@ -1,0 +1,29 @@
+n a
+1
+2
+3 q
+p a
+n b
+2
+3
+4 q
+p b
+&
+a b
+|
+a b
+n c
+1
+2
+3 q
+=
+a c
+s a c
+c a 2
+a a 4
+r a 2
+d a b
+< a c
+m a c
+v b c
+q
