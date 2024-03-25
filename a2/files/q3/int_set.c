@@ -16,7 +16,6 @@ void addVal(struct IntSet *p, int val){
         p->arr = newArr;
         p->cap = p->cap*2;
     }
-
     //insert value to correct place
     for(size_t i=0 ; i< (p->len); ++i){
         if(p->arr[i] == val) return;
