@@ -208,7 +208,7 @@ void intSet::add(int e){
     #ifdef debug
     cout << "inserting value" << endl;
     #endif
-    if(e>data[size-1] && size>0){
+    if(size>0)if(e>data[size-1]){
         data[size++] = e;
         return;
     }
