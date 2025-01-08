@@ -1,0 +1,9 @@
+/usr/bin/ld: /tmp/ccnlSDtu.o: in function `main':
+pizza_cutting.c:(.text+0x68): undefined reference to `log'
+/usr/bin/ld: pizza_cutting.c:(.text+0x87): undefined reference to `log'
+collect2: error: ld returned 1 exit status
+chmod: cannot access 'pizza_cutting': No such file or directory
+/home/victor/Documents/c275/morning_problems/pizza-cutting-tinhangv/soln/.build/build.sh: line 8: ./pizza_cutting: No such file or directory
+
+Expected file "test-cases/as-274-21-pizza_cutting.sh-test/Expected/000-stdout.txt" has no output file match
+Expected file "test-cases/as-274-21-pizza_cutting.sh-test/Expected/000-stderr.txt" has no output file match

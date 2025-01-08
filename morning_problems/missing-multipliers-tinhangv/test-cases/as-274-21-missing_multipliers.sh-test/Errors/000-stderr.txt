@@ -1,0 +1,9 @@
+missing_multipliers.cc: In function ‘int main()’:
+missing_multipliers.cc:109:32: warning: comparison of integer expressions of different signedness: ‘int’ and ‘size_t’ {aka ‘long unsigned int’} [-Wsign-compare]
+  109 |             if (zeroIndices[j] >= i - m && zeroIndices[j] <= i + m) {
+      |                 ~~~~~~~~~~~~~~~^~~~~~~~
+missing_multipliers.cc:109:59: warning: comparison of integer expressions of different signedness: ‘int’ and ‘size_t’ {aka ‘long unsigned int’} [-Wsign-compare]
+  109 |             if (zeroIndices[j] >= i - m && zeroIndices[j] <= i + m) {
+      |                                            ~~~~~~~~~~~~~~~^~~~~~~~
+
+Expected file "test-cases/as-274-21-missing_multipliers.sh-test/Expected/000-stderr.txt" has no output file match

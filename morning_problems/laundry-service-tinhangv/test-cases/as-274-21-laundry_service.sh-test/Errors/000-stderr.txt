@@ -1,0 +1,6 @@
+laundry_service.cc: In function ‘int main()’:
+laundry_service.cc:54:9: warning: unused variable ‘totalLoads’ [-Wunused-variable]
+   54 |     int totalLoads = 0;
+      |         ^~~~~~~~~~
+
+Expected file "test-cases/as-274-21-laundry_service.sh-test/Expected/000-stderr.txt" has no output file match

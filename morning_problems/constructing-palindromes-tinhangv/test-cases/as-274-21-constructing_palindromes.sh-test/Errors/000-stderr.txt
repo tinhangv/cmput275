@@ -1,0 +1,7 @@
+constructing_palindromes.c: In function ‘main’:
+constructing_palindromes.c:9:9: warning: ISO C90 forbids variable length array ‘s’ [-Wvla]
+    9 |         char s[n];
+      |         ^~~~
+
+Expected file "test-cases/as-274-21-constructing_palindromes.sh-test/Expected/000-stdout.txt" has no output file match
+Expected file "test-cases/as-274-21-constructing_palindromes.sh-test/Expected/000-stderr.txt" has no output file match

@@ -1,0 +1,42 @@
+1,mc: 7
+2,short answer: 9
+3,understanding code: 8
+4,bash: 5
+5,io: 5
+6,memory management: 5
+7,writing function: 6
+
+#!/bin/bash
+for file in $1/*.zip; do
+    echo $file
+done
+
+
+int main(){
+    char c;
+    while(scanf("%c",&c)==1){
+        printf("%c%c",c,c);
+    }
+}
+
+if(curLen>=newLen)return;
+int *newArr = malloc(sizeof(int)*newLen);
+for(int i=0; i<curLen, ++i) newArr[o] = arr[i];
+free(arr);
+return newArr;
+
+void printFractionalBinary(float num, float e){
+    printf("0.");
+    float estimate = 0.0;
+    float divisor = 2.0;
+    while(estimate < num - e){
+        float toAdd = 1/divisor;
+        if(toAdd + estimate > num){
+            printf("0");
+        }else{
+            printf("1");
+            estimate += toAdd;
+        }
+        divisor *=2;
+    }
+}
